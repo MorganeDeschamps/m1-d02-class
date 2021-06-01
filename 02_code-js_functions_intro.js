@@ -7,8 +7,7 @@ const peopleILike = ["Marco", "Fede", "Sebas", "Fran"];
 function lazyFunction() {
   const iAmLazy = "Yes";
   // Do I return anything????
-  console.log("What are you doing!?!?!?");
-  return iAmLazy; // return undefined because console.log() return itself undefined
+  return console.log("What are you doing!?!?!?"); // return undefined because console.log() return itself undefined
 }
 
 console.log("lazyFunction", lazyFunction());
