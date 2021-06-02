@@ -1,6 +1,6 @@
-<!-- ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
+![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-# JS | Functions Intro -->
+# JS | Functions Intro
 
 ## Learning goals
 
@@ -119,7 +119,7 @@ But what are parameters? Let's declare (define) our first function and learn, th
 // function declaration
 
 function sayHello() {
-  console.log('Hello there!');
+  console.log("Hello there!");
 }
 ```
 
@@ -136,13 +136,13 @@ This is the example of a function with zero parameters. So when do we need them 
 
 ```javascript
 function sayHelloMary() {
-  console.log('Hello, Mary!');
+  console.log("Hello, Mary!");
 }
 ```
 
 ```javascript
 function sayHelloJohn() {
-  console.log('Hello, John!');
+  console.log("Hello, John!");
 }
 ```
 
@@ -164,15 +164,15 @@ function sayHello(name) {
   console.log(`Hello ${name}!`);
 }
 
-sayHello('Mary');
+sayHello("Mary");
 // name = Mary
 // output: 'Hello Mary!'
 
-sayHello('John');
+sayHello("John");
 // name = John
 // output: 'Hello John!'
 
-sayHello('Lucy');
+sayHello("Lucy");
 // name = Lucy
 // output: 'Hello Lucy!'
 ```
@@ -186,7 +186,7 @@ function sayHello(classmate1, classmate2, classmate3) {
 }
 
 // function call/invocation
-sayHello('Mat', 'Jo', 'Maria');
+sayHello("Mat", "Jo", "Maria");
 // output: Hello Mat, Jo and Maria!
 ```
 
@@ -217,7 +217,7 @@ function printName(name) {
   console.log(`Name is ${name}.`);
 }
 
-printName('Ana');
+printName("Ana");
 
 // output:
 // Name is Ana.
@@ -238,7 +238,7 @@ function printName(name) {
   return `Name is ${name}.`;
 }
 
-printName('Peter'); // => Name is Peter.
+printName("Peter"); // => Name is Peter.
 ```
 
 :::warning
@@ -250,10 +250,10 @@ Here is an example:
 ```javascript
 function printName(name) {
   return `Name is ${name}.`;
-  console.log('Hello, I am after the return statement.');
+  console.log("Hello, I am after the return statement.");
 }
 
-printName('Yo'); // => Name is Yo.
+printName("Yo"); // => Name is Yo.
 ```
 
 ### Multiple returns
@@ -265,14 +265,14 @@ One function can have more than one return statement.
 ```javascript
 function printName(name) {
   if (name.length === 0) {
-    return 'Please provide a valid name!';
+    return "Please provide a valid name!";
   }
 
   return `Name is ${name}.`;
 }
 
-printName(''); // => Please provide a valid name!
-printName('George'); // => Name is George.
+printName(""); // => Please provide a valid name!
+printName("George"); // => Name is George.
 ```
 
 In the previous example, we took care of the _edge_ case in case we accidentally invoked the function without passing an argument. In this case, the condition in the `if` statement would be true, and we would get the message as a return from the function. Since _return_ is the last statement in every function, the rest of the code wouldn't execute.
@@ -289,19 +289,19 @@ Imagine the following scenario: you are asking the user for their personal infor
 function getUserInfo(firstName, lastName) {
   const userInfo = {
     firstName: firstName,
-    lastName: lastName
+    lastName: lastName,
   };
 
   return userInfo;
 }
 
-getUserInfo('ana', 'martinez'); // => { firstName: 'ana', lastName: 'martinez' }
+getUserInfo("ana", "martinez"); // => { firstName: 'ana', lastName: 'martinez' }
 ```
 
 To utilize the _return_, we can do the following:
 
 ```javascript
-const userData = getUserInfo('ana', 'martinez');
+const userData = getUserInfo("ana", "martinez");
 const firstName = userData.firstName;
 console.log(firstName); // => ana
 ```
@@ -319,13 +319,13 @@ function getFavorites(fav1, fav2, fav3) {
   return favorites;
 }
 
-getFavorites('javascript', 'html', 'css'); // => [ 'javascript', 'html', 'css' ]
+getFavorites("javascript", "html", "css"); // => [ 'javascript', 'html', 'css' ]
 ```
 
 To use this data, we can do the following:
 
 ```javascript
-const favoritesArray = getFavorites('javascript', 'html', 'css');
+const favoritesArray = getFavorites("javascript", "html", "css");
 const favorite1 = favoritesArray[0];
 const favorite3 = favoritesArray[2];
 console.log(favorite1, favorite3); // => javascript css

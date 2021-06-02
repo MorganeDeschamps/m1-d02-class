@@ -1,6 +1,6 @@
-<!-- ![](https://i.imgur.com/1QgrNNw.png)
+![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-# JS | Data Types in JavaScript - Arrays -->
+# JS | Data Types in JavaScript - Arrays
 
 ## Learning Goals
 
@@ -36,7 +36,7 @@ const arrayNames = [];
 Or you can declare it with some elements already in it:
 
 ```javascript
-const arrayNames = ['Pedro', 'Jake', 'Joan', 'Mike'];
+const arrayNames = ["Pedro", "Jake", "Joan", "Mike"];
 ```
 
 :::info
@@ -44,7 +44,7 @@ The elements of the array don't have to be all the same type; we can mix strings
 :::
 
 ```javascript
-const arrayNames = ['Pedro', 2, true];
+const arrayNames = ["Pedro", 2, true];
 ```
 
 ### Accessing Elements
@@ -69,7 +69,7 @@ The **length of the array** is the number of elements the array is storing at a 
 Let's try to print _Pedro_ in the console:
 
 ```javascript
-const arrayNames = ['Pedro', 'Jake', 'Joan', 'Mike'];
+const arrayNames = ["Pedro", "Jake", "Joan", "Mike"];
 console.log(arrayNames[0]); // <== Pedro
 ```
 
@@ -100,8 +100,8 @@ An important thing to keep in mind is that, **using `.push()` method, the new va
 If you wanted to **add an element at the beginning of the array**, use [unshift](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) instead of _push_:
 
 ```javascript
-const arrayNames = ['Pedro', 'Jake', 'Joan'];
-arrayNames.unshift('Rachel');
+const arrayNames = ["Pedro", "Jake", "Joan"];
+arrayNames.unshift("Rachel");
 console.log(arrayNames[0]); // <== Rachel
 ```
 
@@ -159,7 +159,7 @@ console.log(arrayNames[2]);
 But what if we have hundreds of names, or even thousands? This is how we can accomplish something like this with a `for` loop:
 
 ```javascript
-const arrayNames = ['Pedro', 'Jake', 'Joan'];
+const arrayNames = ["Pedro", "Jake", "Joan"];
 for (let i = 0; i < arrayNames.length; i++) {
   console.log(arrayNames[i]);
 }
@@ -182,8 +182,8 @@ Iterating over an array with `for` is cool, but since iterating over arrays is s
 In case you are familiar with arrow functions syntax, you know we can shorten the previous syntax a bit:
 
 ```javascript
-const arrayNames = ['Pedro', 'Jake', 'Joan'];
-arrayNames.forEach(name => console.log(name));
+const arrayNames = ["Pedro", "Jake", "Joan"];
+arrayNames.forEach((name) => console.log(name));
 
 // console:
 // Pedro
@@ -199,12 +199,12 @@ Will just call the function as many times as elements are in the array:
 
 ```javascript
 // ES5:
-['a', 'b'].forEach(function () {
-  console.log('hi!');
+["a", "b"].forEach(function () {
+  console.log("hi!");
 });
 
 // ES6:
-['a', 'b'].forEach(() => console.log('hi!'));
+["a", "b"].forEach(() => console.log("hi!"));
 
 // => hi!
 // => hi!
@@ -223,7 +223,7 @@ If we pass one parameter, it will be equal to each element on every iteration.
 });
 
 // ES6:
-[1, 2, 3, 4].forEach(element => console.log(element * 2));
+[1, 2, 3, 4].forEach((element) => console.log(element * 2));
 
 // console:
 // => 2
@@ -235,9 +235,9 @@ If we pass one parameter, it will be equal to each element on every iteration.
 #### Second parameter: Index
 
 ```javascript
-const raceResults = ['Helen', 'John', 'Peter', 'Merry'];
+const raceResults = ["Helen", "John", "Peter", "Merry"];
 raceResults.forEach(function (elem, index) {
-  console.log(elem + ' finished the race in ' + (index + 1) + ' position!');
+  console.log(elem + " finished the race in " + (index + 1) + " position!");
 });
 
 // => Helen finished the race in 1 position!
@@ -256,7 +256,7 @@ Can you guess the output of this?
 
 ```javascript
 function printStars(howMany) {
-  console.log('*'.repeat(howMany));
+  console.log("*".repeat(howMany));
 }
 
 [1, 2, 3, 4, 5].forEach(function (num) {
